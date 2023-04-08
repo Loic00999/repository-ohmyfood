@@ -1,5 +1,5 @@
-        /* *** feuille de styles CSS index - projet ohmyfood *** */
-    /* *** ROOT - Variable CSS *** */
+        /*feuille de styles CSS view - projet ohmyfood*/
+    /*ROOT - Variable SS*/
 :root{
     --color-button: #9356DC;                /* Violet */
     --color-button-gradien: #FF79DA;        /* Violet clair */
@@ -14,7 +14,7 @@
     --color-fonts-titre-menu: #101010;      /* Noir */
     --color-fonts-texte: #000000;           /* Noir */
 }
-    /* *** Inclusion fonts *** */
+    /*Inclusion fonts*/
 @font-face {
     font-family: logo-titres;
     src: url(/assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
@@ -25,49 +25,32 @@
 }
     /* *** Fonts *** */
     /* *** Fonts - Main *** */
-.location>form>input,
-.explorer>p{
+.menu>h1{
+    font-family: logo-titres;
+    font-style: italic;
+    color: var(--color-fonts-titre-menu);
+    font-size: 28px;
+    font-weight: 400;    
+}
+.menu>p,
+.menu>div>h2,
+.menu>div>span>p{
     font-family: texte;
-    color: var(--color-fonts-paragraph-prix);
 }
-.explorer>h1,
-.explorer>a,
-.notice>h2,
-.step>div>p,
-.restaurants-list>h2,
-.card-restaurant>h3,
-.card-restaurant>p{
-    font-family: texte;
-    color: var(--color-fonts-texte);
-}
-.explorer>a,
-.restaurants>a{
-    text-decoration: none;
-}
-.explorer>a{
-    color: var(--color-fonts-button);
-}
-.explorer>h1,
-.notice>h2,
-.restaurants-list>h2{
-    font-size: 24px;
-}
-.explorer>p,
-.card-restaurant>h3{
+.menu>div>h2{
     font-size: 18px;
+    font-weight: 500;   
 }
-.card-restaurant>p{
-    font-size: 17px;
-}
-.location>form>input,
-.explorer>a,
-.step>div>p{
+.menu>p{
     font-size: 16px;
+    font-weight: 300;
 }
-.new{
-    font-family: texte;
-    color: var(--color-fonts-new);
-    font-size: 14px;
+.menu>div>span>p{
+    font-size: 15px;
+    font-weight: 300;
+}
+.menu>div>span>p:last-of-type{
+    font-weight: bold;
 }
     /* *** Fonts - Footer *** */
 .footer>h3{
@@ -83,51 +66,47 @@
     color: var(--color-fonts-footer);
     font-size: 16px;
 }
+    /* *** Header *** */
+.header-logo{
+    display: flex;
+    justify-content: space-around;
+}   
+.header-logo{
+    background-image: url(../assets/images/icon/Vector.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
     /* *** BOX *** */
     /* *** Body *** */
 .body{
-    margin: 0;
+
 }
 .container{
     max-width: 735px;
 }
     /* *** Header *** */
-.header-logo{
-
-}
     /* *** Main *** */
-.location{
+.wallpaper{
 
 }
-.explorer{
+.wallpaper>img{
+    width: 375px;        
+}
+.menu{
 
 }
-.notice{
-
+.menu>div>span{
+    display: flex;
+    justify-content: space-between;
 }
-.step{
+.button-command{
 
-}
-.restaurants-list{
-
-}
-.restaurants{
-
-}
-.card-restaurant{
-
-}
-.card-restaurant>img{
-    width: 375px;
 }
     /* *** Footer *** */
 .footer{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-background-footer);
-    width: 375px;  /*?*/
-    padding-bottom: 15px;
-    padding-left: 25px;        
+    background-color: var(--color-background-footer);        
 }
 .footer>a{
     margin-bottom: 7px;
