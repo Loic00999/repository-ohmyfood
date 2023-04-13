@@ -17,11 +17,11 @@
     /* *** Inclusion fonts *** */
 @font-face {
     font-family: logo-titres;
-    src: url(/assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+    src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
 }
 @font-face {
     font-family: texte;
-    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+    src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
 }
     /* *** Fonts *** */
     /* *** header *** */
