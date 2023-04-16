@@ -1,18 +1,24 @@
         /*feuille de styles CSS view - projet ohmyfood*/
     /*ROOT - Variable SS*/
 :root{
-    --color-button: #9356DC;                /* Violet */
-    --color-button-gradien: #FF79DA;        /* Violet clair */
-    --color-fonts-new: #008766;             /* Vert */
-    --color-clear-new: #99E2D0;             /* Vert clair */
-    --color-bleu-marine: #003A68;           /* Bleu marine */
-    --color-skyblue: #89C8FA;               /* Bleu ciel */
-    --color-background-footer: #353535;     /* Noir */
-    --color-fonts-paragraph-prix: #353535;  /* Noir */
-    --color-fonts-footer: #FFFFFF;          /* White */
-    --color-fonts-button: #FFFFFF;          /* White */
-    --color-fonts-titre-menu: #101010;      /* Noir */
-    --color-fonts-texte: #000000;           /* Noir */
+    --color-button: #9356DC;                    /* Violet */
+    --color-button-gradien: #FF79DA;            /* Violet clair */
+    --color-fonts-new: #008766;                 /* Vert */
+    --color-background-new: #99E2D0;            /* Vert clair */
+    --color-bleu-marine: #003A68;               /* Bleu marine */
+    --color-skyblue: #89C8FA;                   /* Bleu ciel */
+    --color-background-footer: #353535;         /* Noir */
+    --color-fonts-paragraph-prix: #353535;      /* Noir */
+    --color-fonts-footer: #FFFFFF;              /* White */
+    --color-fonts-button: #FFFFFF;              /* White */
+    --color-fonts-titre-menu: #101010;          /* Noir */
+    --color-fonts-texte: #000000;               /* Noir */
+    --color-background-header: #EAEAEA;         /* Gris */
+    --color-background-explorer: whitesmoke;    /* Gris clair */
+    --color-background-card: #FFFFFF;           /* White */
+    --color-background-menu:#F3F3F3;            /* Gris clair */
+    --color-fil-step: #F6F6F6;                  /* White */
+    --color-step-shadow:  rgba(0, 0, 0, 0.15);   /*     background: #000000; opacity: 0.1 */ 
 }
     /*Inclusion fonts*/
 @font-face {
@@ -34,7 +40,7 @@
 }
 .menu>p,
 .card-menu>h2,
-.card-menu>div>p{
+.card-menu-sub2>p{
     font-family: texte;
 }
 .menu>div>h2{
@@ -45,11 +51,11 @@
     font-size: 16px;
     font-weight: 300;
 }
-.card-menu>div>p{
+.card-menu-sub2>p{
     font-size: 15px;
     font-weight: 300;
 }
-.card-menu>div>p:last-of-type{
+.card-menu-sub2>p:last-of-type{
     font-weight: bold;
 }
 .button-command{    
@@ -79,50 +85,109 @@
 .footer>a:hover:last-of-type{
     color: var(--color-skyblue);
 }
+    /* *** *** *** *** *** BOX *** *** *** *** *** */
+    /* *** Body *** */
+html,
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+.container{
+    margin: 0;
+}
     /* *** Header *** */
 .header-logo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }   
 .header-logo{
     background-image: url(../assets/images/icon/Vector.png);
     background-repeat: no-repeat;
     background-position: left;
 }
-    /* *** BOX *** */
-    /* *** Body *** */
-.body{
-
-}
-.container{
-/* !!! */
-}
-    /* *** Header *** */
-.header-logo{
-    border: 1px solid orange; /* !!! */
+.header-logo>img{
+    margin-top: 14px;
+    margin-bottom: 5px;
 }
     /* *** Main *** */
+    /* *** Main - Wallpaper *** */
 .wallpaper{
-    border: 1px solid royalblue; /* !!! */
+    position: relative;
 }
 .wallpaper>img{
-    height: 275px; /* !!! */
-    object-fit: cover; /* !!! */      
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
 }
-.menu{
-    border: 1px solid green; /* !!! */
+    /* *** Main - Menu *** */
+.menu-position{
+    width: 100%;
+    /*position: absolute;
+    top: 243px;*/
+    background-color: var(--color-background-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
 }
+/*.menu{
+
+}*/
+.menu>h1{
+    margin-top: 32px;
+    margin-left: 17px;
+    margin-bottom: 14px;
+}
+.menu>p{
+    margin-top: 28px;
+    margin-left: 13px;
+    margin-bottom: 12px;    
+}
+    /* *** Main - Menu card *** */
 .card-menu{
-    border: 1px solid red; /* !!! */
+    background-color: var(--color-background-card);
+    height: 69px;
     border-radius: 15px;
     margin-left: 13px;
     margin-right: 13px;
+    margin-bottom: 12px;
 }
-.card-menu>div{
+.card-menu>h2{
+    margin-top: 12px;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+.card-menu-sub2{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
-.button-command{
+.card-menu-sub2>p:first-of-type{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 12px
+}
+.card-menu-sub2>p:last-of-type{
+    margin-top: 5px;
+    margin-right: 16px;
+    margin-bottom: 12px
+}
+    /* *** Main - Button command *** */
+.button-command-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 40px;
+}
+.button-command{    
     background-image: linear-gradient(to bottom right, var(--color-button), var(--color-button-gradien));
     width: 186px;
     height: 50px;
@@ -131,11 +196,17 @@
     padding: 13px 16px 13px 16px;    
 }
     /* *** Footer *** */
+.footer-position{
+    width: 100%;
+    position: absolute;
+    top: 1390px;
+    bottom: initial;
+}
 .footer{
     display: flex;
     flex-direction: column;
+    bottom: 0;
     background-color: var(--color-background-footer);
-    width: 100%;
     padding-bottom: 15px;
     padding-left: 25px      
 }
