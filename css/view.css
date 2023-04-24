@@ -31,29 +31,33 @@
 }
     /* *** Fonts *** */
     /* *** Fonts - Main *** */
-.menu>h1{
+.restaurant-name>h1{
     font-family: logo-titres;
     font-style: italic;
     color: var(--color-fonts-titre-menu);
     font-size: 28px;
     font-weight: 400;    
 }
-.menu>p,
+.meal-title>p,
 .card-menu>h2,
 .card-menu-sub2>p{
     font-family: texte;
 }
-.menu>div>h2{
+.card-menu>h2{
     font-size: 18px;
     font-weight: 500;   
 }
-.menu>p{
+.meal-title>p{
     font-size: 16px;
     font-weight: 300;
+}
+.card-menu{
+    text-overflow: ellipsis;
 }
 .card-menu-sub2>p{
     font-size: 15px;
     font-weight: 300;
+    text-overflow: ellipsis;
 }
 .card-menu-sub2>p:last-of-type{
     font-weight: bold;
@@ -66,30 +70,23 @@
     font-weight: bold;
 }
     /* *** Fonts - Footer *** */
-.footer>h3{
+.footer-logo>h3{
     font-family: logo-titres;
     font-style: italic;
     color: var(--color-fonts-footer);
     font-size: 18px;
     font-weight: 400;
 }
-.footer>a{
+.footer-links>a{
     font-family: texte;
     text-decoration: none;
     color: var(--color-fonts-footer);
     font-size: 16px;
 }
-.footer>a:hover{
-    color: var(--color-button);
-}
-.footer>a:hover:last-of-type{
-    color: var(--color-skyblue);
-}
     /* *** *** *** *** *** BOX *** *** *** *** *** */
     /* *** Body *** */
 html,
 body{
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -103,58 +100,74 @@ body{
 .header-logo{
     display: flex;
     justify-content: center;
+    position: relative;
 }   
-.header-logo{
-    background-image: url(../assets/images/icon/Vector.png);
-    background-repeat: no-repeat;
-    background-position: left;
-}
 .header-logo>img{
     margin-top: 14px;
     margin-bottom: 5px;
 }
+.link-home{
+    width: 17.2px;
+    height: 16px;
+}
+.link-home-possition{
+    position: absolute;
+    top: 24px;
+    left: 23px;
+}
+.link-home{
+    background-image: url(../assets/images/icon/Vector.png);
+    background-repeat: no-repeat;
+}
     /* *** Main *** */
     /* *** Main - Wallpaper *** */
-.wallpaper{
-    position: relative;
-}
 .wallpaper>img{
     width: 100%;
     height: 275px;
     object-fit: cover;
 }
     /* *** Main - Menu *** */
-.menu-position{
+.container-main{
     width: 100%;
-    /*position: absolute;
-    top: 243px;*/
+    display: flex;
+    flex-direction: column;
+    } 
+.menu{
     background-color: var(--color-background-menu);
     display: flex;
     flex-direction: column;
     justify-content: center;    
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
+    margin-top: -32px;
 }
-/*.menu{
-
-}*/
-.menu>h1{
+.restaurant-name>h1{
     margin-top: 32px;
-    margin-left: 17px;
+    margin-left: 4.53%;
     margin-bottom: 14px;
 }
-.menu>p{
+.meal-title>p{
+    height: 27px;
     margin-top: 28px;
-    margin-left: 13px;
-    margin-bottom: 12px;    
+    margin-left: 3.47%;
+    margin-bottom: 12px;
+    background-image: url(../assets/images/icon/Line.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;    
 }
-    /* *** Main - Menu card *** */
+.restaurant-name{
+    position: relative;
+}
+    /* *** Main - Menu card *** */   
 .card-menu{
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-background-card);
     height: 69px;
     border-radius: 15px;
-    margin-left: 13px;
-    margin-right: 13px;
+    margin-left: 3.47%;
+    margin-right: 3.47%;
     margin-bottom: 12px;
 }
 .card-menu>h2{
@@ -188,28 +201,60 @@ body{
     margin-bottom: 40px;
 }
 .button-command{    
-    background-image: linear-gradient(to bottom right, var(--color-button), var(--color-button-gradien));
+    background-image: linear-gradient(to bottom right, var(--color-button-gradien), var(--color-button));
+    cursor: pointer;
     width: 186px;
     height: 50px;
     border: none;
     border-radius: 25px;
-    padding: 13px 16px 13px 16px;    
+    padding: 13px 16px 13px 16px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);    
+}
+.button-command:hover{
+    opacity: 0.9;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
+}
+.heart-position{
+    position: absolute;
+    right: 41px;
+    top: 40px;    
+}
+.heart{
+    background-color: var(--color-background-menu);
+    background-image: url(../assets/images/icon/heart-blank.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    width: 22px;
+    height: 21px;
+}
+.heart:hover{
+    background-color: var(--color-background-menu);
+    background-image: url(../assets/images/icon/heart-purple.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    width: 22px;
+    height: 21px;
 }
     /* *** Footer *** */
-.footer-position{
-    width: 100%;
-    position: absolute;
-    top: 1390px;
-    bottom: initial;
-}
 .footer{
     display: flex;
     flex-direction: column;
-    bottom: 0;
     background-color: var(--color-background-footer);
     padding-bottom: 15px;
-    padding-left: 25px      
+    padding-left: 6.67%;        
 }
-.footer>a{
+.footer-logo{
+    margin-bottom: 7px; 
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 7px;
+}
+.footer-links>a:hover{
+    color: var(--color-background-new);
 }

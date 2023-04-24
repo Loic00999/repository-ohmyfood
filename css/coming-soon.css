@@ -1,18 +1,24 @@
         /* *** feuille de styles CSS index - projet ohmyfood *** */
     /* *** ROOT - Variable CSS *** */
 :root{
-    --color-button: #9356DC;                /* Violet */
-    --color-button-gradien: #FF79DA;        /* Violet clair */
-    --color-fonts-new: #008766;             /* Vert */
-    --color-clear-new: #99E2D0;             /* Vert clair */
-    --color-bleu-marine: #003A68;           /* Bleu marine */
-    --color-skyblue: #89C8FA;               /* Bleu ciel */
-    --color-background-footer: #353535;     /* Noir */
-    --color-fonts-paragraph-prix: #353535;  /* Noir */
-    --color-fonts-footer: #FFFFFF;          /* White */
-    --color-fonts-button: #FFFFFF;          /* White */
-    --color-fonts-titre-menu: #101010;      /* Noir */
-    --color-fonts-texte: #000000;           /* Noir */
+    --color-button: #9356DC;                    /* Violet */
+    --color-button-gradien: #FF79DA;            /* Violet clair */
+    --color-fonts-new: #008766;                 /* Vert */
+    --color-background-new: #99E2D0;            /* Vert clair */
+    --color-bleu-marine: #003A68;               /* Bleu marine */
+    --color-skyblue: #89C8FA;                   /* Bleu ciel */
+    --color-background-footer: #353535;         /* Noir */
+    --color-fonts-paragraph-prix: #353535;      /* Noir */
+    --color-fonts-footer: #FFFFFF;              /* White */
+    --color-fonts-button: #FFFFFF;              /* White */
+    --color-fonts-titre-menu: #101010;          /* Noir */
+    --color-fonts-texte: #000000;               /* Noir */
+    --color-background-header: #EAEAEA;         /* Gris */
+    --color-background-explorer: whitesmoke;    /* Gris clair */
+    --color-background-card: #FFFFFF;           /* White */
+    --color-background-menu:#F3F3F3;            /* Gris clair */
+    --color-fil-step: #F6F6F6;                  /* White */
+    --color-step-shadow:  rgba(0, 0, 0, 0.15);   /*     background: #000000; opacity: 0.1 */ 
 }
     /* *** Inclusion fonts *** */
 @font-face {
@@ -24,24 +30,34 @@
     src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
 }
     /* *** Fonts *** */
-    /* *** header *** */
-.header-logo>div>p{
-    font-family: logo-titres;
-    font-style: italic;
+    /* *** Header *** */
+.header-logo{
+    display: flex;
+    justify-content: center;
+}   
+.header-logo>img{
+    margin-top: 14px;
+    margin-bottom: 5px;
 }
 .p1,
 .p3{
     color: var(--color-fonts-new);
     font-size: 28px;
     font-weight: bold;
+    margin-bottom: 12px;
 }
 .p2,
 .p4{
-    color: var(--color-clear-new);
+    color: var(--color-background-new);
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 0%;
 }
     /* *** Fonts - Main *** */
+.container>a{
+    text-decoration: none;
+}
 .button-back>a{
     font-family: texte;
     color: var(--color-fonts-button);
@@ -64,10 +80,18 @@
     font-size: 18px;
 }
 .footer>a:hover{
-    color: var(--color-skyblue);
+    color: var(--color-background-new);
 }
     /* *** BOX *** */
     /* *** Body *** */
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
 .container{
     margin: 0;
     background-color: whitesmoke;    
@@ -85,44 +109,40 @@
 }   
 .header-logo>img{
     width: 162px;
-    margin-top: 24px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+.link-home{
+    width: 17.2px;
+    height: 16px;
+}
+.link-home{
+    background-image: url(../assets/images/icon/Vector.png);
+    background-repeat: no-repeat;
 }
 .p0{
-    width: 375px;
-    margin-bottom: 300px;
-    position: relative;
-}
-.p1{
-    position: absolute;
-    top: 50px;
-    left: 50px;    
-}
-.p2{
-    position: absolute;
-    top: 85px;
-    left: 110px;    
-}
-.p3{
-    position: absolute;
-    top: 140px;
-    left: 50px;    
-}
-.p4{
-    position: absolute;
-    top: 175px;
-    left: 155px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
 }
     /* *** Main *** */
+.wallpaper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .wallpaper>img{
-    width: 50%;
-    margin-left: 25%;
+    width: 90%;
+    max-height: 320px;
 }
 .button-back{
     background-image: linear-gradient(to bottom right, var(--color-button), var(--color-button-gradien));
     border-radius: 25px;
     padding: 13px 16px 13px 16px;
     margin-top: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
     /* *** Footer *** */
 .footer{
@@ -132,4 +152,29 @@
     align-items: center;
     background-color: var(--color-background-footer);
     width: 100%;       
+}
+    /* *** LOADER *** */
+.loader-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* */
+}
+#loader{                        /* display : none; ? */
+    margin-top: 120px;
+    border: 4px solid #ff8300;
+    border-top: 4px;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin{
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }

@@ -49,8 +49,8 @@
     color: var(--color-fonts-texte);
 }
 .explorer-link>a,
-.restaurants-new>a,
-.restaurants-panel>a{
+.card-restaurant>a,
+.card-restaurant>a{
     text-decoration: none;
 }
 .explorer-link>a{
@@ -100,14 +100,14 @@
     font-size: 14px;
 }
     /* *** Fonts - Footer *** */
-.footer>h3{
+.footer-logo>h3{
     font-family: logo-titres;
     font-style: italic;
     color: var(--color-fonts-footer);
     font-size: 18px;
     font-weight: 400;
 }
-.footer>a{
+.footer-links>a{
     font-family: texte;
     text-decoration: none;
     color: var(--color-fonts-footer);
@@ -117,7 +117,6 @@
     /* *** Body *** */
 html,
 body{
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -140,13 +139,19 @@ body{
 }
     /* *** Main *** */
     /* *** Main - Location *** */
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 .location>input{
     width: 99%;
     height: 50px;
     background-color: var(--color-background-header);
     background-image: url(../assets/images/icon/Pin.png);
     background-repeat: no-repeat;
-    background-position-x: 100px;
+    background-position-x: 26.67%;
     background-position-y: center;
     border: none;
     text-align: center;
@@ -162,14 +167,14 @@ body{
     align-items: center;
 }
 .explorer-text>h1{
-    width: 275px; 
+    width: 73.33%; 
     height: 68px;
     margin-top: 40px;
     margin-bottom: 0px;
     text-align: center;   
 }
 .explorer-text>p{
-    width: 315px; 
+    width: 84%; 
     height: 46px;
     margin-top: 0px;
     margin-bottom: 27px;
@@ -181,18 +186,28 @@ body{
     align-items: center;
 }
 .explorer-link>a{
-    background-image: linear-gradient(to bottom right, var(--color-button), var(--color-button-gradien));
+    background-image: linear-gradient(to bottom right, var(--color-button-gradien), var(--color-button));
     text-align: center;
+    cursor: pointer;
     width: 218px;
     border-radius: 25px;
     padding: 13px 18.75px 13px 18.75px;
     margin-bottom: 57px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.explorer-link>a:hover{
+    opacity: 0.9;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
 }
     /* *** Main - Notice *** */
 .notice>h2{
     margin-top: 46px;
     margin-bottom: 26px;
-    margin-left: 20px;
+    margin-left: 5.33%;
+}
+.step{
+    width: 100%;
 }
 .step-a1,
 .step-b1,
@@ -200,14 +215,15 @@ body{
     display: flex;
     align-items: center;
     position: relative;
-    width: 322.49px;
+    width: 86%;
+    max-width: 322.49px;
     height: 72.38px;  
     background-color: var(--color-background-explorer);
     border: solid 1px var(--color-fil-step);
     border-radius: 20px;
-    box-shadow: 0 4px var(--color-step-shadow);    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);    
     text-align: center;
-    margin-left: 32.51px;
+    margin-left: 8.67%;
     background-repeat: no-repeat;
     background-position-x: 36.19px;
     background-position-y: center;  
@@ -215,7 +231,7 @@ body{
 .step-a1>p,
 .step-b1>p,
 .step-c1>p{
-margin-left: 73.49px;  
+margin-left: 22.79%;  
 }
 .step-a1{
     background-image: url(../assets/images/icon/mobile-screen-button.png);
@@ -257,37 +273,35 @@ margin-left: 73.49px;
 }
 .restaurants-list>h2{
     margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 5.33%;
 }
 .restaurants{
     padding-bottom: 48px;
-    margin-left: 14px;
-    margin-right: 15px;
+    margin-left: 3.73%;
+    margin-right: 4%;
 }
 .restaurants>a{
     width: 100%;
     padding-bottom: 48px;
 }
 .card-restaurant{
+    position: relative;
     background-color: var(--color-background-card);
     width: 100%;
     height: 251px;
     margin-bottom: 18px;
     border-radius: 15px;
 }
-.card-restaurant-title{
-    position: relative;
-}
 .card-restaurant-title>h3{
     width: 50%;
     margin-top: 16px;
-    margin-left: 13px;
+    margin-left: 3.47%;
     margin-bottom: 0;
 }
 .card-restaurant-title>p{
     width: 50%;
     margin-top: 5px;
-    margin-left: 13px;
+    margin-left: 3.47%;
     margin-bottom: 12px;
 }
 .img-restaurant{
@@ -316,8 +330,7 @@ margin-left: 73.49px;
 .heart-position{
     position: absolute;
     right: 25px;
-    bottom: 21px;
-    z-index: 2;    
+    bottom: 21px;    
 }
 .heart{
     background-color: var(--color-background-card);
@@ -328,9 +341,8 @@ margin-left: 73.49px;
     border: none;
     width: 22px;
     height: 21px;
-    z-index: 2;
 }
-.heart:active{
+.heart:hover{
     background-color: var(--color-background-card);
     background-image: url(../assets/images/icon/heart-purple.png);
     background-repeat: no-repeat;
@@ -339,7 +351,6 @@ margin-left: 73.49px;
     border: none;
     width: 22px;
     height: 21px;
-    z-index: 2;
 }
     /* *** Footer *** */
 .footer{
@@ -347,8 +358,16 @@ margin-left: 73.49px;
     flex-direction: column;
     background-color: var(--color-background-footer);
     padding-bottom: 15px;
-    padding-left: 25px;        
+    padding-left: 6.67%;        
 }
-.footer>a{
+.footer-logo{
+    margin-bottom: 7px; 
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 7px;
+}
+.footer-links>a:hover{
+    color: var(--color-background-new);
 }
