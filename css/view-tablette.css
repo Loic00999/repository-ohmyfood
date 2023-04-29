@@ -1,0 +1,80 @@
+        /* *** feuille de styles CSS view-tablette - projet ohmyfood *** */
+    /* *** Media Querie *** */
+@media screen and (min-width:741px) and (max-width: 1024px){
+    /* *** *** *** *** *** BOX *** *** *** *** *** */
+    /* *** Header *** */
+    .header-logo{
+        height: 79.67px;
+    } 
+    .header-logo>img{
+        width: 200px;
+        height: 34.2px;
+        margin-top: 30px;
+        margin-bottom: 32.14px;
+    }
+    .link-home-possition{
+        top: 32px;
+        left: 24px;
+    }
+    /* *** Main *** */
+    /* *** Main - Wallpaper *** */
+    .wallpaper>img{
+        height: 324.83px;        
+    }
+    /* *** Main - Menu *** */   
+    .menu{
+        width: 86.63%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .restaurant-name-position{
+        height: 41px;        
+        justify-content: space-around;
+        margin-left: 4.53%;
+        margin-bottom: 12px;
+    }
+    .restaurant-name>h1{
+        margin-top: 32px;
+        margin-bottom: 30px;
+    }
+    /* *** Main - Menu Heart *** */
+    .meal-title>p{
+        margin-left: 9.95%;    
+    }
+    /* *** Main - Menu card *** */ 
+    .card-menu{
+        margin-left: 9.95%;
+        margin-right: 9.95%;
+    }
+    /* *** Main - Button command *** */
+    .button-command-flex{
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+    /* *** Footer *** */
+    .footer{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0;
+        padding-left: 0;        
+    }
+    .footer-logo{
+        margin: 57px 6.67% 30px 16px;
+    }
+    .footer-logo>h3{
+        margin: 0 0 0 0; 
+    }
+    .footer-links{
+        flex-direction: column;
+        margin-top: 16px;
+        margin-left: 6.67%;
+        margin-bottom: 10px;
+    }
+    .footer-links>a{
+        width: 130px;
+    }
+    .footer-link-logo{
+        width: 190px;
+    }
+}

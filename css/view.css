@@ -87,15 +87,11 @@
     /* *** *** *** *** *** BOX *** *** *** *** *** */
     /* *** Body *** */
 html,
-body{
+body,
+.container{
+    width: 100%;
     margin: 0;
     padding: 0;
-}
-body{
-    width: 100%;
-}
-.container{
-    margin: 0;
 }
     /* *** Header *** */
 .header-logo{
@@ -103,6 +99,7 @@ body{
     justify-content: center;
     position: relative;
     align-items: center;
+    height: 63px;
 }   
 .header-logo>img{
     margin-top: 14px;
@@ -143,7 +140,13 @@ body{
     border-top-right-radius: 32px;
     margin-top: -32px;
 }
-.restaurant-name>h1{
+.restaurant-name-position{
+    width: 90.93%;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 32px;
     margin-left: 4.53%;
     margin-bottom: 14px;
@@ -158,15 +161,33 @@ body{
     background-position-x: left;
     background-position-y: bottom;    
 }
-.restaurant-name{
-    position: relative;
+    /* *** Main - Menu Heart *** */
+.heart{
+    background-color: var(--color-background-menu);
+    background-image: url(../assets/images/icon/heart-blank.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    width: 22px;
+    height: 21px;
+}
+.heart:hover{
+    background-color: var(--color-background-menu);
+    background-image: url(../assets/images/icon/heart-purple.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    width: 22px;
+    height: 21px;
 }
     /* *** Main - Menu card *** */   
 .card-menu{
     display: flex;
     flex-direction: column;
     background-color: var(--color-background-card);
-    height: 69px;
+    min-height: 69px;
     border-radius: 15px;
     margin-left: 3.47%;
     margin-right: 3.47%;
@@ -216,31 +237,6 @@ body{
     opacity: 0.9;
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
 }
-.heart-position{
-    position: absolute;
-    right: 41px;
-    top: 40px;    
-}
-.heart{
-    background-color: var(--color-background-menu);
-    background-image: url(../assets/images/icon/heart-blank.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    border: none;
-    width: 22px;
-    height: 21px;
-}
-.heart:hover{
-    background-color: var(--color-background-menu);
-    background-image: url(../assets/images/icon/heart-purple.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    border: none;
-    width: 22px;
-    height: 21px;
-}
     /* *** Footer *** */
 .footer{
     display: flex;
@@ -252,9 +248,11 @@ body{
 .footer-logo{
     margin-bottom: 7px; 
 }
-.footer-links>a{
+.footer-links{
     display: flex;
     flex-direction: column;
+}
+.footer-links>a{
     margin-bottom: 7px;
 }
 .footer-link-logo{
@@ -280,8 +278,4 @@ body{
     background-position-x: center;
     background-position-y: center;
     margin-right: 10.08px;
-}
-.footer-links>a:hover,
-.footer-link-logo>a:hover{
-    color: var(--color-background-new);
 }
