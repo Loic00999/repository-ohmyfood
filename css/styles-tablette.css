@@ -1,0 +1,67 @@
+        /* *** feuille de styles CSS index-tablette - projet ohmyfood *** */
+    /* *** Media Querie *** */
+@media screen and (min-width:741px) and (max-width: 1024px){
+    /* *** Main - Notice *** */
+    .notice>h2{
+        margin-top: 50px;
+        margin-bottom: 25px;
+        margin-left: 12.5%;
+    }
+    .step{
+        flex-direction: row;
+    }
+    .step-a1,
+    .step-b1,
+    .step-c1{
+        margin-left: 0;                
+    }
+    .step-a,
+    .step-b,
+    .step-c{
+        width: 22.4%;                
+    }
+    .step-a{
+        margin-left: 13.37%;                
+    }
+    .step-b,
+    .step-c{
+        margin-left: 2.54%;                
+    }
+    /* *** Main - Restaurants list *** */
+    .restaurants-new,
+    .restaurants-panel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .card-restaurant{
+        width: 34.63%;
+    }
+    /* *** Footer *** */
+    .footer{
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-bottom: 0;
+        padding-left: 0;        
+    }
+    .footer-logo{
+        margin: 57px 26.42px 30px 16px;
+    }
+    .footer-logo>h3{
+        margin: 0 0 0 0; 
+    }
+    .footer-links{
+        flex-direction: row;
+        gap: 7px;
+    }
+    .footer-links>a{
+        width: 130px;
+        margin-top: 64px;
+        margin-bottom: 30px;
+    }
+    .footer-link-logo{
+        width: 190px;
+        margin-top: 64px;
+        margin-bottom: 30px;
+    }
+}
