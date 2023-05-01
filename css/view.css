@@ -1,26 +1,21 @@
-        /*feuille de styles CSS view - projet ohmyfood*/
-    /*ROOT - Variable SS*/
+        /* *** feuille de styles CSS view - projet ohmyfood - Loïc M pour OpenClassRoom *** */
+    /*ROOT - Variable CSS*/
 :root{
-    --color-button: #9356DC;                    /* Violet */
-    --color-button-gradien: #FF79DA;            /* Violet clair */
-    --color-fonts-new: #008766;                 /* Vert */
-    --color-background-new: #99E2D0;            /* Vert clair */
-    --color-bleu-marine: #003A68;               /* Bleu marine */
-    --color-skyblue: #89C8FA;                   /* Bleu ciel */
-    --color-background-footer: #353535;         /* Noir */
-    --color-fonts-paragraph-prix: #353535;      /* Noir */
-    --color-fonts-footer: #FFFFFF;              /* White */
-    --color-fonts-button: #FFFFFF;              /* White */
-    --color-fonts-titre-menu: #101010;          /* Noir */
-    --color-fonts-texte: #000000;               /* Noir */
-    --color-background-header: #EAEAEA;         /* Gris */
-    --color-background-explorer: whitesmoke;    /* Gris clair */
-    --color-background-card: #FFFFFF;           /* White */
-    --color-background-menu:#F3F3F3;            /* Gris clair */
-    --color-fil-step: #F6F6F6;                  /* White */
-    --color-step-shadow:  rgba(0, 0, 0, 0.15);   /*     background: #000000; opacity: 0.1 */ 
+    --view_css-projet-ohmyfood-Loïc-M-pour-OpenClassRoom: #fe4164;
+    --color-primaire: #9356DC;
+    --color-secondaire: #FF79DA;
+    --color-tertiaire: #008766;
+    --color-fonts-button: #FFFFFF;
+    --color-fonts-footer: #FFFFFF;
+    --color-fonts-texte: #000000;
+    --color-fonts-titre-menu: #101010;
+    --color-background-card: #FFFFFF;
+    --color-background-footer: #353535;
+    --color-background-menu:#F3F3F3;
+    --color-background-new: #99E2D0;
+    --color-shadow-button:  rgba(0, 0, 0, 0.25);
 }
-    /*Inclusion fonts*/
+    /* *** Inclusion fonts *** */
 @font-face {
     font-family: logo-titres;
     src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
@@ -29,62 +24,92 @@
     font-family: texte;
     src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
 }
+    /* *** Animation menu - Keyframes *** */
+@keyframes loadind-menu{
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleY(1);
+        opacity: 1;
+    }    
+}
+    /* *** Animation menu - Valeurs *** */
+.meal-starters>article:nth-of-type(1),
+.meal-starters>article:nth-of-type(2),
+.meal-starters>article:nth-of-type(3),
+.meal-starters>article:nth-of-type(4){
+    animation: loadind-menu 1s 100ms both ease-in-out;
+}
+.meal-dishes>article:nth-of-type(1),
+.meal-dishes>article:nth-of-type(2),
+.meal-dishes>article:nth-of-type(3),
+.meal-dishes>article:nth-of-type(4){
+    animation: loadind-menu 1s 300ms both ease-in-out;    
+} 
+.meal-desserts>article:nth-of-type(1),
+.meal-desserts>article:nth-of-type(2),
+.meal-desserts>article:nth-of-type(3),
+.meal-desserts>article:nth-of-type(4){
+    animation: loadind-menu 1s 500ms both ease-in-out;    
+}
     /* *** Fonts *** */
     /* *** Fonts - Main *** */
 .restaurant-name>h1{
+    color: var(--color-fonts-titre-menu);
     font-family: logo-titres;
     font-style: italic;
-    color: var(--color-fonts-titre-menu);
     font-size: 28px;
     font-weight: 400;    
 }
 .meal-title>p,
-.card-menu>h2,
-.card-menu-sub2>p{
+.card-menu-title>h2,
+.card-menu-dish-garnish>p,
+.card-menu-price>p{
     font-family: texte;
 }
-.card-menu>h2{
+.card-menu-title>h2{
     font-size: 18px;
-    font-weight: 500;   
+    font-weight: 500;
 }
 .meal-title>p{
     font-size: 16px;
     font-weight: 300;
 }
-.card-menu{
-    text-overflow: ellipsis;
-}
-.card-menu-sub2>p{
+.card-menu-dish-garnish>p,
+.card-menu-price>p{
     font-size: 15px;
     font-weight: 300;
-    text-overflow: ellipsis;
 }
-.card-menu-sub2>p:last-of-type{
+.card-menu-price>p{
     font-weight: bold;
 }
-.button-command{    
+.button-command{
+    color: var(--color-fonts-button);   
     font-family: texte;
-    color: var(--color-fonts-button);
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
     /* *** Fonts - Footer *** */
 .footer-logo>h3{
+    color: var(--color-fonts-footer);
     font-family: logo-titres;
     font-style: italic;
-    color: var(--color-fonts-footer);
     font-size: 18px;
     font-weight: 400;
 }
 .footer-link-logo>a,
 .footer-links>a{
+    color: var(--color-fonts-footer);
     font-family: texte;
     text-decoration: none;
-    color: var(--color-fonts-footer);
     font-size: 16px;
+    cursor: pointer;
 }
-    /* *** *** *** *** *** BOX *** *** *** *** *** */
+    /* *** Box *** */
     /* *** Body *** */
 html,
 body,
@@ -97,8 +122,8 @@ body,
 .header-logo{
     display: flex;
     justify-content: center;
-    position: relative;
     align-items: center;
+    position: relative;
     height: 63px;
 }   
 .header-logo>img{
@@ -114,8 +139,11 @@ body,
     top: 24px;
     left: 23px;
 }
+.link-home-possition>a{
+    cursor: pointer;
+}
 .link-home{
-    background-image: url(../assets/images/icon/Vector.png);
+    background-image: url(../assets/images/icon/vector.png);
     background-repeat: no-repeat;
 }
     /* *** Main *** */
@@ -127,39 +155,39 @@ body,
 }
     /* *** Main - Menu *** */
 .container-main{
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     } 
 .menu{
-    background-color: var(--color-background-menu);
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
+    background-color: var(--color-background-menu);    
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
     margin-top: -32px;
 }
 .restaurant-name-position{
-    width: 90.93%;
-    height: 27px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 90.93%;
+    height: 27px;
     margin-top: 32px;
     margin-left: 4.53%;
     margin-bottom: 14px;
 }
 .meal-title>p{
+    background-image: url(../assets/images/icon/line.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
     height: 27px;
     margin-top: 28px;
     margin-left: 3.47%;
-    margin-bottom: 12px;
-    background-image: url(../assets/images/icon/Line.png);
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: bottom;    
+    margin-bottom: 12px;    
 }
     /* *** Main - Menu Heart *** */
 .heart{
@@ -171,8 +199,9 @@ body,
     border: none;
     width: 22px;
     height: 21px;
+    cursor: pointer;
 }
-.heart:hover{
+.heart:active{
     background-color: var(--color-background-menu);
     background-image: url(../assets/images/icon/heart-purple.png);
     background-repeat: no-repeat;
@@ -181,37 +210,88 @@ body,
     border: none;
     width: 22px;
     height: 21px;
+    transition: all 900ms;
 }
     /* *** Main - Menu card *** */   
 .card-menu{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: var(--color-background-card);
-    min-height: 69px;
+    height: 69px;
     border-radius: 15px;
     margin-left: 3.47%;
     margin-right: 3.47%;
     margin-bottom: 12px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
 }
-.card-menu>h2{
+.card-menu:active .card-menu-check{
+    margin-right: 0;
+}
+.card-menu:active .card-menu-title>h2{
+    width: 82.34%;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.card-menu-check{
+    flex-shrink: 0;
+    background-color: var(--color-background-new);
+    background-image: url(../assets/images/icon/check.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    width: 59px;
+    height: 69px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-right: -59px;
+    transition: all 500ms;
+}
+.card-menu-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+.card-menu-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 21px;
     margin-top: 12px;
     margin-left: 15px;
-    margin-bottom: 0;
 }
-.card-menu-sub2{
+.card-menu-title>h2{
+    width: 85.93%;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.card-menu-details{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 15px;
 }
-.card-menu-sub2>p:first-of-type{
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-bottom: 12px
+.card-menu-dish-garnish,
+.card-menu-dish-garnish>p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.card-menu-sub2>p:last-of-type{
+.card-menu-dish-garnish>p,
+.card-menu-price>p{
     margin-top: 5px;
-    margin-right: 16px;
-    margin-bottom: 12px
+    margin-bottom: 0;
+}
+.card-menu-price{
+    flex-shrink: 0;
 }
     /* *** Main - Button command *** */
 .button-command-flex{
@@ -224,18 +304,17 @@ body,
     margin-bottom: 40px;
 }
 .button-command{    
-    background-image: linear-gradient(to bottom right, var(--color-button-gradien), var(--color-button));
-    cursor: pointer;
+    background-image: linear-gradient(to bottom right, var(--color-secondaire), var(--color-primaire));
     width: 186px;
     height: 50px;
     border: none;
     border-radius: 25px;
     padding: 13px 16px 13px 16px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);    
+    box-shadow: 0px 4px 10px 0px var(--color-shadow-button);
 }
 .button-command:hover{
+    box-shadow: 1px 1px 9px var(--color-shadow-button);
     opacity: 0.9;
-    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
 }
     /* *** Footer *** */
 .footer{
@@ -262,20 +341,20 @@ body,
     margin-bottom: 7px;
 }
 .footer-link-logo-submit{
-    width: 11px;
-    height: 13px;
     background-image: url(../assets/images/icon/cutlery.png);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+    width: 11px;
+    height: 13px;
     margin-right: 11px;
 }
 .footer-link-logo-partner{
-    width: 12px;
-    height: 13px;
     background-image: url(../assets/images/icon/partner.png);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+    width: 12px;
+    height: 13px;
     margin-right: 10.08px;
 }

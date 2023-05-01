@@ -1,5 +1,8 @@
-        /* *** feuille de styles CSS view-desktop - projet ohmyfood *** */
+        /* *** feuille de styles CSS view-desktop - projet ohmyfood - Loïc M pour OpenClassRoom *** */
     /* *** Media Querie *** */
+:root{
+    --view_desktop_css-projet-ohmyfood-Loïc-M-pour-OpenClassRoom: #fe4164;
+}
 @media screen and (min-width: 1025px) and (max-width: 1440px){
     /* *** *** *** *** *** BOX *** *** *** *** *** */
     /* *** Header *** */
@@ -44,10 +47,24 @@
     .meal-title>p{
         margin-left: 19.91%;    
     }
+    .heart:hover{
+        background-color: var(--color-background-menu);
+        background-image: url(../assets/images/icon/heart-purple.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        border: none;
+        width: 22px;
+        height: 21px;
+        transition: all 900ms;
+    }
     /* *** Main - Menu card *** */ 
     .card-menu{
         margin-left: 19.91%;
         margin-right: 20%;
+    }
+    .card-menu:hover .card-menu-check{
+        margin-right: 0;
     }
     /* *** Footer *** */
     .footer{

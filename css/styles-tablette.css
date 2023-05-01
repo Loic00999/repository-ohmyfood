@@ -1,67 +1,336 @@
         /* *** feuille de styles CSS index-tablette - projet ohmyfood *** */
     /* *** Media Querie *** */
 @media screen and (min-width:741px) and (max-width: 1024px){
-    /* *** Main - Notice *** */
-    .notice>h2{
-        margin-top: 50px;
-        margin-bottom: 25px;
-        margin-left: 12.5%;
+    /* *** Fonts *** */
+    /* *** Fonts - Main *** */
+    .location>input,
+    .explorer-text>p{
+        font-family: texte;
+        color: var(--color-fonts-paragraph-prix);
     }
-    .step{
-        flex-direction: row;
+    .explorer-text>h1,
+    .explorer-link>a,
+    .notice>h2,
+    .step-content>p,
+    .restaurants-list>h2,
+    .card-restaurant-title>h3,
+    .card-restaurant-title>p{
+        font-family: texte;
+        color: var(--color-fonts-texte);
     }
-    .step-a1,
-    .step-b1,
-    .step-c1{
-        margin-left: 0;                
+    .explorer-link>a,
+    .card-restaurant>a,
+    .card-restaurant>a{
+        text-decoration: none;
     }
-    .step-a,
-    .step-b,
-    .step-c{
-        width: 22.4%;                
+    .explorer-link>a{
+        color: var(--color-fonts-button);
+        font-weight: bold;
     }
-    .step-a{
-        margin-left: 13.37%;                
+    .explorer-text>h1,
+    .notice>h2,
+    .restaurants-list>h2{
+        font-size: 24px;
     }
-    .step-b,
-    .step-c{
-        margin-left: 2.54%;                
+    .explorer-text>p,
+    .card-restaurant-title>h3{
+        font-size: 18px;
     }
-    /* *** Main - Restaurants list *** */
-    .restaurants-new,
-    .restaurants-panel{
+    .location>input,
+    .step-content>p{
+        font-weight: bold;
+    }
+    .step-number>p{
+        font-family: texte;
+        color: var(--color-fonts-button);    
+    }
+    .card-restaurant-title>p{
+        font-size: 17px;
+    }
+    .location>input,
+    .explorer-link>a,
+    .step-content>p{
+        font-size: 16px;
+    }
+    .step-number>p{
+        font-size: 14px;    
+    }
+    .new1>p,
+    .new2>p{
+        font-family: texte;
+        color: var(--color-fonts-new);
+        font-size: 14px;
+    }
+        /* *** Fonts - Footer *** */
+    .footer-logo>h3{
+        font-family: logo-titres;
+        font-style: italic;
+        color: var(--color-fonts-footer);
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .footer-link-logo>a,
+    .footer-links>a{
+        font-family: texte;
+        text-decoration: none;
+        color: var(--color-fonts-footer);
+        font-size: 16px;
+    }
+        /* *** *** *** *** *** BOX *** *** *** *** *** */
+        /* *** Body *** */
+    html,
+    body,
+    .container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        /* *** Header *** */
+    .header-logo{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        height: 63px;
+    }
+    .header-logo>img{
+        width: 162px;
+        margin-top: 14px;
+        margin-bottom: 5px;
+    }
+        /* *** Main *** */
+        /* *** Main - Location *** */
+    .location{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .location>input{
+        width: 99%;
+        height: 50px;
+        background-color: var(--color-background-header);
+        background-image: url(../assets/images/icon/Pin.png);
+        background-repeat: no-repeat;
+        background-position-x: 26.67%;
+        background-position-y: center;
+        border: none;
+        text-align: center;
+    }
+        /* *** Main - Explorer *** */
+    .explorer{
+        background-color: var(--color-background-explorer);
+    }
+    .explorer-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .explorer-text>h1{
+        width: 73.33%; 
+        height: 68px;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        text-align: center;   
+    }
+    .explorer-text>p{
+        width: 84%; 
+        height: 46px;
+        margin-top: 0px;
+        margin-bottom: 27px;
+        text-align: center;   
+    }
+    .explorer-link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .explorer-link>a{
+        background-image: linear-gradient(to bottom right, var(--color-button-gradien), var(--color-button));
+        text-align: center;
+        cursor: pointer;
+        width: 218px;
+        border-radius: 25px;
+        padding: 13px 18.75px 13px 18.75px;
+        margin-bottom: 57px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        
+    }
+    .explorer-link>a:hover{
+        opacity: 0.9;
+        box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.25);
+    }
+        /* *** Main - Notice *** */
+    .notice{
+        display: flex;
+        flex-direction: column;
+    }
+    .notice>h2{
+        margin-top: 46px;
+        margin-bottom: 26px;
+        margin-left: 5.33%;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .step-content{
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 86%;
+        max-width: 322.49px;
+        height: 72.38px;  
+        background-color: var(--color-background-explorer);
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);    
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position-x: 36.19px;
+        background-position-y: center;  
+    }
+    .step-content>p{
+        margin-left: 22.79%;  
+    }
+    .step-content:first-child{
+        background-image: url(../assets/images/icon/mobile-screen-button.png);
+    }
+    .step-content:nth-child(2){
+        background-image: url(../assets/images/icon/list-ul.png);
+    }
+    .step-content:nth-child(3){
+        background-image: url(../assets/images/icon/store.png);
+    }
+    .step-content:first-child,
+    .step-content:nth-child(2){
+        margin-bottom: 24.92px;  
+    }
+    .step-content:nth-child(3){
+        margin-bottom: 68px;
+    }
+    .step-number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24.19px;
+        left: -12px;
+        width: 24px;
+        height: 24px;
+        background-color: var(--color-button);
+        border: none;
+        border-radius: 12px;
+        text-align: center;  
+    }
+        /* *** Main - Restaurants list *** */
+    .restaurants-list{
+        width: 100%;
+        background-color: var(--color-background-explorer);
+        padding-top: 54px;
+    }
+    .restaurants-list>h2{
+        margin-top: 0px;
+        margin-left: 5.33%;
+    }
+    .restaurants{
+        padding-bottom: 48px;
+        margin-left: 3.73%;
+        margin-right: 4%;
     }
     .card-restaurant{
-        width: 34.63%;
+        position: relative;
+        background-color: var(--color-background-card);
+        width: 100%;
+        min-height: 251px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+    }
+    .card-restaurant-title{
+        padding-bottom: 12px;
+    }
+    .card-restaurant-title>h3{
+        width: 50%;
+        margin-top: 16px;
+        margin-left: 3.47%;
+        margin-bottom: 0;
+    }
+    .card-restaurant-title>p{
+        width: 50%;
+        margin-top: 5px;
+        margin-left: 3.47%;
+    }
+    .img-restaurant{
+        position: relative;
+    }
+    .img-restaurant>img{
+        width: 100%;
+        height: 174px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .new1,
+    .new2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: var(--color-background-new);
+        width: 80px;
+        height: 29px;
+        border-radius: 2px;
+    }
+    .heart-position{
+        position: absolute;
+        right: 25px;
+        bottom: 21px;    
+    }
+    .heart{
+        background-color: var(--color-background-card);
+        background-image: url(../assets/images/icon/heart-blank.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        border: none;
+        width: 22px;
+        height: 21px;
+    }
+    .heart:hover{
+        background-color: var(--color-background-card);
+        background-image: url(../assets/images/icon/heart-purple.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        border: none;
+        width: 22px;
+        height: 21px;
     }
     /* *** Footer *** */
     .footer{
         flex-direction: row-reverse;
         align-items: center;
+        justify-content: space-between;
         padding-bottom: 0;
         padding-left: 0;        
     }
     .footer-logo{
-        margin: 57px 26.42px 30px 16px;
+        margin: 57px 6.67% 30px 16px;
     }
     .footer-logo>h3{
         margin: 0 0 0 0; 
     }
     .footer-links{
-        flex-direction: row;
-        gap: 7px;
+        flex-direction: column;
+        margin-top: 16px;
+        margin-left: 6.67%;
+        margin-bottom: 10px;
     }
     .footer-links>a{
         width: 130px;
-        margin-top: 64px;
-        margin-bottom: 30px;
     }
     .footer-link-logo{
         width: 190px;
-        margin-top: 64px;
-        margin-bottom: 30px;
     }
 }

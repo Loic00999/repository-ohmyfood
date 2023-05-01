@@ -20,6 +20,55 @@
     --color-fil-step: #F6F6F6;                  /* White */
     --color-step-shadow:  rgba(0, 0, 0, 0.15);   /*     background: #000000; opacity: 0.1 */    
 }
+    /* *** Animation loader *** */
+    /* *** Animation loader - Keyframes *** */
+@keyframes loader{
+    0% {
+        transform: rotate(0deg);
+    }
+    99%{
+        transform: rotate(360deg);
+    }
+    100% {
+        visibility: hidden;        
+    }
+}
+@keyframes loader-hidden{
+    to{
+        transform: scale(0);
+    }
+}
+    /* *** Animation loader - Keyframes *** */
+.loader-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: loader-hidden 100ms forwards;
+    animation-delay: 3s;
+    transform-origin: top;
+}
+#loader{
+    margin-top: 120px;
+    margin-bottom: 80px;
+    border-top: 8px solid var(--color-button-gradien);
+    border-bottom: 8px solid var(--color-button);
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    border-radius: 50%;
+    animation: loader 3s linear forwards;
+    background-image: url(../assets/images/logo/coming-soon.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-color: var(--color-background-explorer);
+}
     /* *** Inclusion fonts *** */
 @font-face {
     font-family: logo-titres;
@@ -107,21 +156,20 @@
     /* *** *** *** *** *** BOX *** *** *** *** *** */
     /* *** Body *** */
 html,
-body{
+body,
+.container{
+    width: 100%;
     margin: 0;
     padding: 0;
-}
-body{
-    width: 100%;
-}
-.container{
-    margin: 0;
 }
     /* *** Header *** */
 .header-logo{
     display: flex;
     justify-content: center;
+    position: relative;
     height: 63px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    padding-bottom: 2px;
 }
 .header-logo>img{
     width: 162px;
@@ -137,10 +185,10 @@ body{
     width: 100%;
 }
 .location>input{
-    width: 99%;
+    width: 100%;
     height: 50px;
     background-color: var(--color-background-header);
-    background-image: url(../assets/images/icon/Pin.png);
+    background-image: url(../assets/images/icon/pin.png);
     background-repeat: no-repeat;
     background-position-x: 26.67%;
     background-position-y: center;
@@ -184,8 +232,7 @@ body{
     border-radius: 25px;
     padding: 13px 18.75px 13px 18.75px;
     margin-bottom: 57px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);    
 }
 .explorer-link>a:hover{
     opacity: 0.9;
@@ -215,14 +262,14 @@ body{
     height: 72.38px;  
     background-color: var(--color-background-explorer);
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);    
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);    
     text-align: center;
     background-repeat: no-repeat;
     background-position-x: 36.19px;
     background-position-y: center;  
 }
 .step-content>p{
-margin-left: 22.79%;  
+    margin-left: 22.79%;  
 }
 .step-content:first-child{
     background-image: url(../assets/images/icon/mobile-screen-button.png);
@@ -273,9 +320,12 @@ margin-left: 22.79%;
     position: relative;
     background-color: var(--color-background-card);
     width: 100%;
-    height: 251px;
+    min-height: 251px;
     margin-bottom: 18px;
     border-radius: 15px;
+}
+.card-restaurant-title{
+    padding-bottom: 12px;
 }
 .card-restaurant-title>h3{
     width: 50%;
@@ -287,7 +337,6 @@ margin-left: 22.79%;
     width: 50%;
     margin-top: 5px;
     margin-left: 3.47%;
-    margin-bottom: 12px;
 }
 .img-restaurant{
     position: relative;
@@ -327,7 +376,7 @@ margin-left: 22.79%;
     width: 22px;
     height: 21px;
 }
-.heart:hover{
+.heart:active{
     background-color: var(--color-background-card);
     background-image: url(../assets/images/icon/heart-purple.png);
     background-repeat: no-repeat;
@@ -336,6 +385,7 @@ margin-left: 22.79%;
     border: none;
     width: 22px;
     height: 21px;
+    transition: all 750ms;
 }
     /* *** Footer *** */
 .footer{

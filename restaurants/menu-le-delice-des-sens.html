@@ -2,14 +2,17 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Loïc Minet">
-	    <meta name="description" content="!">
-	    <meta name="keywords" content="!">
+        <meta name="author" content="Loïc M pour OpenClassRoom">
+	    <meta name="description" content="Menu du restaurant 'Le délice des sens'">
+	    <meta name="keywords" content="restaurant, gastronomie française">
 	    <meta name="robots" content="follow">
 	    <meta name="robots" content="index">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link rel="stylesheet" href="../css/view.css">
+	    <link rel="stylesheet" href="../css/view-tablette.css">
+	    <link rel="stylesheet" href="../css/view-desktop.css">
+	    <link rel="stylesheet" href="../css/view-desktop-large.css">
         <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
         <title>Menu - Le délice des sens</title>
     </head>
@@ -28,40 +31,69 @@
             <main>
                 <div class="container-main">
                     <div class="wallpaper">
-                        <img src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Ilustration d'un plat du restaurant 'Le délice des sens'">
+                        <img src="../assets/images/restaurants/wallpaper-le-delice-des-sens.jpg" alt="Ilustration d'un plat du restaurant 'Le délice des sens'">
                     </div>
                     <div class="menu">
-                        <div class="restaurant-name">
-                            <h1>Le délice des sens</h1>
+                        <div class="restaurant-name-position">
+                            <div class="restaurant-name">
+                                <h1>Le délice des sens</h1>
+                            </div>
                             <div class="heart-position">
                                 <button class="heart"></button>
                             </div>
                         </div>
-                        <section class="meal">
+                        <div class="meal">
                             <div class="meal-starters">
                                 <div class="meal-title">
                                     <p>ENTRÉES</p>
                                 </div>
                                 <article class="card-menu">
-                                    <h2>Tartare de thon</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Assaisonné au yuzu</p>
-                                        <p>25€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Tartare de thon</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Assaisonné au yuzu</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>25€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                                 <article class="card-menu">
-                                    <h2>Bouchée de homard croustillant</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Et sa farandole de petits légumes</p>
-                                        <p>35€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Bouchée de homard croustillant</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Et sa farandole de petits légumes</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>35€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                                 <article class="card-menu">
-                                    <h2>Velouté de cèpes</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Aux truffes</p>
-                                        <p>20€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Velouté de cèpes</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Aux truffes</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>20€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                             </div>
                             <div class="meal-dishes">
@@ -69,25 +101,52 @@
                                     <p>PLATS</p>
                                 </div>
                                 <article class="card-menu">
-                                    <h2>Poulet rôti aux herbes de Provence</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Et sa crème de truffe</p>
-                                        <p>40€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Poulet rôti aux herbes de Provence</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Et sa crème de truffe</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>40€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                                 <article class="card-menu">
-                                    <h2>Langouste rôtie</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Et ses légumes de saison</p>
-                                        <p>35€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Langouste rôtie</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Et ses légumes de saison</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>35€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                                 <article class="card-menu">
-                                    <h2>Côte de bœuf Angus</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Et sa purée de panais</p>
-                                        <p>44€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Côte de bœuf Angus</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Et sa purée de panais</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>44€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                             </div>
                             <div class="meal-desserts">
@@ -95,31 +154,58 @@
                                     <p>DESSERTS</p>
                                 </div>
                                 <article class="card-menu">
-                                    <h2>Farandole de desserts</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Du chef</p>
-                                        <p>18€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Farandole de desserts</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Du chef</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>18€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                                 <article class="card-menu">
-                                    <h2>Crème brulée</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>Revisitée</p>
-                                        <p>22€</p>
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Crème brulée</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>Revisitée</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>22€</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                 </article>
-                                 <article class="card-menu">
-                                    <h2>Tiramisu</h2>
-                                    <div class="card-menu-sub2">
-                                        <p>À la noisette</p>
-                                        <p>23€</p>
+                                    <div class="card-menu-check"></div>
+                                </article>
+                                <article class="card-menu">
+                                    <div class="card-menu-content">
+                                        <div class="card-menu-title">
+                                            <h2>Tiramisu</h2>
+                                        </div>
+                                        <div class="card-menu-details">
+                                            <div class="card-menu-dish-garnish">
+                                                <p>À la noisette</p>
+                                            </div>
+                                            <div class="card-menu-price">
+                                                <p>23€</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="card-menu-check"></div>
                                 </article>
                             </div>
                             <div class="button-command-flex">
                                 <button type="submit" class="button-command">Commander</button>
                             </div>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -137,7 +223,7 @@
                             <div class="footer-link-logo-partner"></div>
                             <a class="footer-link-partner" href="../coming-soon.html">Devenir partenaire</a>
                         </div>
-                        <a href="./coming-soon.html">Mention légales</a>
+                        <a href="../coming-soon.html">Mention légales</a>
                         <a href="mailto:contact@ohmyfood.com">Contact</a> 
                     </div>
                 </div>

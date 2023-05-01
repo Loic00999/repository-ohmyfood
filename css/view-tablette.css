@@ -1,7 +1,10 @@
-        /* *** feuille de styles CSS view-tablette - projet ohmyfood *** */
+        /* *** feuille de styles CSS view-tablette - projet ohmyfood - Loïc M pour OpenClassRoom *** */
     /* *** Media Querie *** */
+:root{
+    --view_tablette_css-projet-ohmyfood-Loïc-M-pour-OpenClassRoom: #fe4164;
+}
 @media screen and (min-width:741px) and (max-width: 1024px){
-    /* *** *** *** *** *** BOX *** *** *** *** *** */
+    /* *** Box *** */
     /* *** Header *** */
     .header-logo{
         height: 79.67px;
@@ -27,9 +30,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .restaurant-name-position{
-        height: 41px;        
+    .restaurant-name-position{        
         justify-content: space-around;
+        height: 41px;
         margin-left: 4.53%;
         margin-bottom: 12px;
     }
@@ -41,10 +44,24 @@
     .meal-title>p{
         margin-left: 9.95%;    
     }
+    .heart:hover{
+        background-color: var(--color-background-menu);
+        background-image: url(../assets/images/icon/heart-purple.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        border: none;
+        width: 22px;
+        height: 21px;
+        transition: all 900ms;
+    }
     /* *** Main - Menu card *** */ 
     .card-menu{
         margin-left: 9.95%;
         margin-right: 9.95%;
+    }
+    .card-menu:hover .card-menu-check{
+        margin-right: 0;
     }
     /* *** Main - Button command *** */
     .button-command-flex{
