@@ -2,22 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Loïc Minet">
-	    <meta name="description" content="!">
-	    <meta name="keywords" content="!">
-	    <meta name="robots" content="follow">
-	    <meta name="robots" content="index">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link rel="stylesheet" href="./css/styles.css">
+        <meta name="author" content="Loïc M pour OpenClassRoom">
+        <meta name="description" content="Page d'accueil 'Oh My Food', trouvez votre restaurant">
+        <meta name="keywords" content="restaurants, gastronomie française, sortie">
+        <meta name="robots" content="follow">
+        <meta name="robots" content="index">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/styles-tablette.css">
         <link rel="stylesheet" href="./css/styles-desktop.css">
         <link rel="stylesheet" href="./css/styles-desktop-large.css">
-        <link rel="icon" type="image/x-icon" href="./assets/images/logo/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon.ico">
         <title>ohmyfood</title>
     </head>
     <body>
-        <div class="loader-box">                        
+        <div class="loader-box">
             <div id="loader"></div> 
         </div>
         <div class="container">
@@ -28,12 +28,13 @@
             </header>
             <main>
                 <div class="location">
-                    <input type="text" name="location" id="location" placeholder="Paris, Belleville">
+                    <p>Paris, Belleville</p>
+                    <div class="pin"></div>
                 </div>
                 <div class="explorer">
                     <div class="explorer-text">
                         <h1>Réservez le menu qui vous convient</h1>
-                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                        <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
                     </div>
                     <div class="explorer-link">
                         <a href="#restaurants-list">Explorer nos restaurants</a>
@@ -60,19 +61,19 @@
                                 <p>3</p>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="restaurants-list" id="restaurants-list">
                     <h2>Restaurants</h2>
                     <div class="restaurants">
-                        <section class="restaurants-new">
+                        <div class="restaurants-new">
                             <article class="card-restaurant">
                                 <a href="./restaurants/menu-la-palette-du-gout.html">
                                     <div class="img-restaurant">
-                                        <img src="./assets/images/restaurants/wallpaper-la-palette-du-gout.jpg" alt="Ilustration d'un plat du restaurant 'La palette du goût'">                                  
-                                        <div class="new1">
+                                        <img src="./assets/images/restaurants/wallpaper-la-palette-du-gout.jpg" alt="Ilustration d'un plat du restaurant 'La palette du goût'">
+                                        <div class="new">
                                             <p>Nouveau</p>
-                                        </div>                               
+                                        </div>
                                     </div>
                                     <div class="card-restaurant-title">
                                         <h3>La palette du goût</h3>
@@ -83,13 +84,13 @@
                                     <button class="heart"></button>
                                 </div>
                             </article>
-                            <article class="card-restaurant">                            
+                            <article class="card-restaurant">
                                 <a href="./restaurants/menu-la-note-enchantee.html">
                                     <div class="img-restaurant">
                                         <img src="./assets/images/restaurants/wallpaper-la-note-enchantee.jpg" alt="Ilustration d'un plat du restaurant 'La note enchantée'">
-                                        <div class="new2">
+                                        <div class="new">
                                             <p>Nouveau</p>
-                                        </div>                                
+                                        </div>
                                     </div>
                                     <div class="card-restaurant-title">
                                         <h3>La note enchantée</h3>
@@ -98,10 +99,10 @@
                                 </a>
                                 <div class="heart-position">
                                     <button class="heart"></button>
-                                </div>                                
+                                </div>
                             </article>
-                        </section>
-                        <section class="restaurants-panel">
+                        </div>
+                        <div class="restaurants-panel">
                             <article class="card-restaurant">
                                 <a href="./restaurants/menu-a-la-francaise.html">
                                     <div class="img-restaurant">
@@ -130,7 +131,7 @@
                                     <button class="heart"></button>
                                 </div>
                             </article>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -149,7 +150,7 @@
                             <a class="footer-link-partner" href="./coming-soon.html">Devenir partenaire</a>
                         </div>
                         <a href="./coming-soon.html">Mention légales</a>
-                        <a href="mailto:contact@ohmyfood.com">Contact</a> 
+                        <a href="mailto:contact@ohmyfood.com">Contact</a>
                     </div>
                 </div>
             </footer>
