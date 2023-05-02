@@ -1,26 +1,30 @@
-        /* *** feuille de styles CSS index - projet ohmyfood *** */
+        /* *** feuille de styles CSS coming-soon - projet ohmyfood - Loïc M pour OpenClassRoom *** */
     /* *** ROOT - Variable CSS *** */
 :root{
-    --color-button: #9356DC;                    /* Violet */
-    --color-button-gradien: #FF79DA;            /* Violet clair */
-    --color-fonts-new: #008766;                 /* Vert */
-    --color-background-new: #99E2D0;            /* Vert clair */
-    --color-bleu-marine: #003A68;               /* Bleu marine */
-    --color-skyblue: #89C8FA;                   /* Bleu ciel */
-    --color-background-footer: #353535;         /* Noir */
-    --color-fonts-paragraph-prix: #353535;      /* Noir */
-    --color-fonts-footer: #FFFFFF;              /* White */
-    --color-fonts-button: #FFFFFF;              /* White */
-    --color-fonts-titre-menu: #101010;          /* Noir */
-    --color-fonts-texte: #000000;               /* Noir */
-    --color-background-header: #EAEAEA;         /* Gris */
-    --color-background-explorer: whitesmoke;    /* Gris clair */
-    --color-background-card: #FFFFFF;           /* White */
-    --color-background-menu:#F3F3F3;            /* Gris clair */
-    --color-fil-step: #F6F6F6;                  /* White */
-    --color-step-shadow:  rgba(0, 0, 0, 0.15);   /*     background: #000000; opacity: 0.1 */ 
+    --coming_soon_css-projet-ohmyfood-Loïc-M-pour-OpenClassRoom: #fe4164;
+    --color-primaire: #9356DC;
+    --color-secondaire: #FF79DA;
+    --color-tertiaire: #008766;
+    --color-fonts-button: #FFFFFF;
+    --color-fonts-footer: #FFFFFF;
+    --color-fonts-location: #353535;
+    --color-fonts-texte: #000000;
+    --color-fonts-titre-menu: #101010;
+    --color-background-card: #FFFFFF;
+    --color-background-explorer: #f5f5f5;
+    --color-background-footer: #353535;
+    --color-background-location: #EAEAEA;
+    --color-background-loader: rgba(0, 0, 0, 0.9);
+    --color-background-loader-desktop-large: #FFFFFF;
+    --color-background-loader-logo: #f5f5f5;
+    --color-background-menu:#F3F3F3;
+    --color-background-new: #99E2D0;
+    --color-background-restaurants-list: #f5f5f5;
+    --color-background-step: #f5f5f5;
+    --color-shadow-button:  rgba(0, 0, 0, 0.25);
+    --color-shadow-header:  rgba(0, 0, 0, 0.15);
+    --color-shadow-step:  rgba(0, 0, 0, 0.15);
 }
-    /* *** Inclusion fonts *** */
 @font-face {
     font-family: logo-titres;
     src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
@@ -29,43 +33,157 @@
     font-family: texte;
     src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
 }
-    /* *** Fonts *** */
+    /* *** BOX *** */
+    /* *** Body *** */
+html,
+body,
+.container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: var(--color-background-explorer);
+}
     /* *** Header *** */
 .header-logo{
     display: flex;
     justify-content: center;
-}   
+    align-items: center;
+} 
 .header-logo>img{
+    width: 162px;
     margin-top: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
-.p1,
-.p3{
-    color: var(--color-fonts-new);
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 12px;
+    /* *** Main *** */
+    /* *** Main - Wallpaper *** */
+.wallpaper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
 }
-.p2,
-.p4{
-    color: var(--color-background-new);
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 12px;
+.wallpaper>img{
+    width: 345px;
+    object-fit: cover;
+}
+    /* *** Main - Message *** */
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.message-content{
+    width: 375px;
+    font-family: logo-titres;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: italic;
     margin-top: 0%;
 }
-    /* *** Fonts - Main *** */
-.container>a{
+.message-content>p:first-of-type,
+.message-content>p:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secondaire);
+    margin-left: 5%;
+    margin-bottom: 1px;
+}
+.message-content>p:nth-child(2),
+.message-content>p:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--color-primaire);
+    margin-right: 5%;
+    margin-top: 0;
+}
+    /* *** Main - W3C *** */
+.rapport-w3c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.rapport-w3c>p{
+    font-family: texte;
+    font-size: large;
+    font-weight: bold;
+    color: var(--color-fonts-titre-menu);
+    margin-bottom: 20px;
+}
+.rapport-w3c-html{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 312px;
+}
+.rapport-w3c-css{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 312px;
+}
+.rapport-w3c-html>a,
+.rapport-w3c-css>a{
+    font-family: texte;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    color: var(--color-primaire);
+    margin-bottom: 6px;
+}
+    /* *** Main - Button home *** */
+.button-home-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.button-home-flex>a{
     text-decoration: none;
 }
-.button-back>a{
+.button-home{    
+    background-image: linear-gradient(to bottom right, var(--color-secondaire), var(--color-primaire));
+    color: var(--color-fonts-button);   
     font-family: texte;
-    color: var(--color-fonts-button);
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 16px 13px 16px;
+    box-shadow: 0px 4px 10px 0px var(--color-shadow-button);
 }
-    /* *** Fonts - Footer *** */
+.button-home:hover{
+    box-shadow: 1px 1px 9px var(--color-shadow-button);
+    opacity: 0.9;
+}
+    /* *** Footer *** */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-background-footer);
+    width: 100%;       
+}
 .footer>h3{
     font-family: logo-titres;
     font-style: italic;
@@ -81,100 +199,4 @@
 }
 .footer>a:hover{
     color: var(--color-background-new);
-}
-    /* *** BOX *** */
-    /* *** Body *** */
-html,
-body{
-    margin: 0;
-    padding: 0;
-}
-body{
-    width: 100%;
-}
-.container{
-    margin: 0;
-    background-color: whitesmoke;    
-}
-.main-flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    /* *** Header *** */
-.header-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}   
-.header-logo>img{
-    width: 162px;
-    margin-top: 14px;
-    margin-bottom: 5px;
-}
-.link-home{
-    width: 17.2px;
-    height: 16px;
-}
-.link-home{
-    background-image: url(../assets/images/icon/Vector.png);
-    background-repeat: no-repeat;
-}
-.p0{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 24px;
-}
-    /* *** Main *** */
-.wallpaper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.wallpaper>img{
-    width: 90%;
-    max-height: 320px;
-}
-.button-back{
-    background-image: linear-gradient(to bottom right, var(--color-button), var(--color-button-gradien));
-    border-radius: 25px;
-    padding: 13px 16px 13px 16px;
-    margin-top: 60px;
-    margin-bottom: 45px;
-}
-    /* *** Footer *** */
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--color-background-footer);
-    width: 100%;       
-}
-    /* *** LOADER *** */
-.loader-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9); /* */
-}
-#loader{                        /* display : none; ? */
-    margin-top: 120px;
-    border: 4px solid #ff8300;
-    border-top: 4px;
-    width: 250px;
-    height: 250px;
-    z-index: 1;
-    border-radius: 50%;
-    animation: spin 3s linear infinite;
-}
-@keyframes spin{
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
 }
